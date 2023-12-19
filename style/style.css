@@ -70,6 +70,7 @@ body{
 }
 .submit-button:hover{
     background-color: #BB4120;
+    color: #fff;
     border-color: #a03315
 }
 
