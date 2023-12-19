@@ -1,0 +1,83 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://kit.fontawesome.com/af60ee0f55.js" crossorigin="anonymous"></script> 
+    <link rel="stylesheet" href="./style/bootstrap.min.css">
+    <link rel="stylesheet" href="./style/style.css">
+
+    <title>Bookmarker</title>
+    <link rel="icon" type="image/x-icon" href="./images/bookmark-favicon.png">
+</head>
+<body>
+
+    <h1 class="main-title m-auto">Bookmarker</h1>
+
+    <div class="main-section container">
+        <h2 class="second-title text-center">
+            <i class="fa-solid fa-bookmark"></i> 
+            bookmark your favorite sites
+            <i class="fa-solid fa-bookmark"></i>
+        </h2>
+
+        <label for="bookmarkName">
+            <i class="fa-solid fa-book-bookmark"></i>
+            site name
+        </label>
+        <input type="text" id="bookmarkName"class="form-control" placeholder="Bookmark Name">
+
+        <label for="bookmarkName" class="mt-4 ">
+            <i class="fa-solid fa-link"></i>
+            site URL
+        </label>
+        <input type="text" id="bookmarkURL" class="form-control" placeholder="Website URL">
+
+        <button class="btn submit-button text-capitalize ">submit</button>
+    </div>
+   
+
+    <div class="container ">
+      <div class="search-area">
+        <input type="text" placeholder="search bookmark name..." class="form-control w-50  m-auto mt-4 ">
+      </div>
+        <table class="table text-center">
+            <thead>
+                <th>Index</th>
+                <th>website name</th>
+                <th>visit</th>
+                <th>delete</th>
+            </thead>
+            <tbody id="displayTable">
+            </tbody>
+        </table>
+    </div>
+    
+    <div id="popup-container" class="d-flex justify-content-center align-items-baseline d-none ">
+      <div class="popup-box bg-white rounded-2 ">
+        <div class="w-100 d-flex justify-content-between align-items-center">
+          <div class="circles d-flex mb-4">
+            <span class="rounded-circle me-2"></span>
+            <span class="rounded-circle me-2"></span>
+            <span class="rounded-circle me-2"></span>
+          </div>
+          <button class="btn border-0 mb-4" id="closeBtn" onclick="closePopup()">
+            <i class="fa-solid fa-xmark close fs-3"></i>
+          </button>
+        </div>
+  
+        <p>Site Name or Url is not valid, Please follow the rules below :</p>
+        <ul class="rules">
+          <li>
+            <i class="fa-regular fa-circle-right p-2"></i>Site name must contain at least 3 characters
+          </li>
+          <li>
+            <i class="fa-regular fa-circle-right p-2"></i>Site URL must be a valid one
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <script src="./js/index.js"></script>
+</body>
+</html>
